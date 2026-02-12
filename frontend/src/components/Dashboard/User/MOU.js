@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "./MOU.css";
+import "./CSS/MOU.css";
 
 export default function MOU() {
   const navigate = useNavigate();

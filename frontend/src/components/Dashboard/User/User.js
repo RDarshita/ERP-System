@@ -10,28 +10,27 @@ import Profile from "./profile";
 import Donation from "./Donation";
 import MOU from "./MOU";
 import Membership from "./Membership";
-import UserDashboard from "./UserDashboard"; // <-- Correct import here!
+import UserDashboard from "./UserDashboard";
+import DashboardHome from "./DashboardHome";
 
-import "./UserDashboard";
+import "./CSS/UserDashboard.css";
 
 const User = () => {
   return (
-    <div className="user-dashboard-wrapper">
-      <main className="user-dashboard-content">
-        <Routes>
-          <Route index element={<UserDashboard />} />
-          <Route path="admissions" element={<Admissions />} />
-          <Route path="awards" element={<Awards />} />
-          <Route path="research" element={<Research />} />
-          <Route path="immersion" element={<Immersion />} />
-          <Route path="placement" element={<Placement />} />
-          <Route path="profile" element={<Profile />} />
-          <Route path="donation" element={<Donation />} />
-          <Route path="mou" element={<MOU />} />
-          <Route path="membership" element={<Membership />} />
-        </Routes>
-      </main>
-    </div>
+    <Routes>
+      <Route path="/" element={<UserDashboard />}>
+        <Route index element={<DashboardHome />} />
+        <Route path="admissions" element={<Admissions />} />
+        <Route path="awards" element={<Awards />} />
+        <Route path="research" element={<Research />} />
+        <Route path="immersion" element={<Immersion />} />
+        <Route path="placement" element={<Placement />} />
+        <Route path="profile" element={<Profile />} />
+        <Route path="donation" element={<Donation />} />
+        <Route path="mou" element={<MOU />} />
+        <Route path="membership" element={<Membership />} />
+      </Route>
+    </Routes>
   );
 };
 

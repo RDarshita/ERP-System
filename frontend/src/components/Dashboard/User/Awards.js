@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Awards.css";
+import "./CSS/Awards.css";
 
 export default function Awards() {
   const navigate = useNavigate();

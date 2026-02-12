@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Placement.css";
+import "./CSS/Placement.css";
 
 export default function Placement() {
   const navigate = useNavigate();

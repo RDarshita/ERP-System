@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Membership.css";
+import "./CSS/Membership.css";
 
 export default function Membership() {
   const [memberships, setMemberships] = useState([]);

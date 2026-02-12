@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Immersion.css";
+import "./CSS/Immersion.css";
 
 export default function Immersion() {
   const navigate = useNavigate();

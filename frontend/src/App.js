@@ -61,7 +61,8 @@ function App() {
 
         <Route
           path="/dashboard/user/*"
-          element={<RoleRoute role="user" element={<UserDashboard />} />}
+          // element={<RoleRoute role="user" element={<UserDashboard />} />}
+          element={<UserDashboard />}
         />
 
         {/* Fallback */}

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Donation.css";
+import "./CSS/Donation.css";
 
 export default function Donation() {
   const navigate = useNavigate();

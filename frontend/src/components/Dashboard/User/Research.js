@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Research.css";
+import "./CSS/Research.css";
 
 export default function Research() {
   const navigate = useNavigate();
