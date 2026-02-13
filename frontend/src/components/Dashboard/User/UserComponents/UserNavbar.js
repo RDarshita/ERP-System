@@ -13,6 +13,20 @@ const UserNavbar = ({ userName = "Student" }) => {
     .join("")
     .toUpperCase();
 
+  const handleProfileClick = (event) => {
+    const rect = event.currentTarget.getBoundingClientRect();
+    const originX = rect.left + rect.width / 2;
+    const originY = rect.top + rect.height / 2;
+
+    document.documentElement.style.setProperty("--profile-origin-x", `${originX}px`);
+    document.documentElement.style.setProperty("--profile-origin-y", `${originY}px`);
+    document.body.classList.add("profile-transition");
+
+    window.setTimeout(() => {
+      document.body.classList.remove("profile-transition");
+    }, 700);
+  };
+
   return (
     <nav className="user-navbar">
       <div className="user-navbar__left">
@@ -24,22 +38,27 @@ const UserNavbar = ({ userName = "Student" }) => {
       </div>
 
       <div className="user-navbar__center">
-        <Link to="/dashboard/donation" className="user-navbar__link">
+        <Link to="/dashboard/user/donation" className="user-navbar__link">
           Donation
         </Link>
-        <Link to="/dashboard/user/profile" className="user-navbar__link">
+        <Link to="/dashboard/user/mou" className="user-navbar__link">
           MOU
         </Link>
-        <Link to="/dashboard/user/research" className="user-navbar__link">
+        <Link to="/dashboard/user/membership" className="user-navbar__link">
           Membership
         </Link>
       </div>
 
       <div className="user-navbar__right">
-        <div className="user-navbar__profile" aria-label={`Profile ${userName}`}>
+        <Link
+          to="/dashboard/user/profile"
+          className="user-navbar__profile"
+          aria-label={`Profile ${userName}`}
+          onClick={handleProfileClick}
+        >
           <span className="user-navbar__initials">{initials || "U"}</span>
           <span className="user-navbar__status" aria-hidden="true" />
-        </div>
+        </Link>
       </div>
     </nav>
   );
