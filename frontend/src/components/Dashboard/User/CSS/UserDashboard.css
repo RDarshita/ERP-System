@@ -47,11 +47,22 @@ body {
   overflow: hidden;
 }
 
+.user-layout--full {
+  flex-direction: column;
+}
+
 .user-content {
   flex: 1;
   min-width: 0;
   height: 100%;
   overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(90, 114, 140, 0.7) rgba(12, 16, 22, 0.7);
+}
+
+
+.user-content--full {
+  width: 100%;
 }
 
 .user-header {
