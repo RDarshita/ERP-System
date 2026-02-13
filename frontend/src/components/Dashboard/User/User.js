@@ -12,6 +12,7 @@ import MOU from "./MOU";
 import Membership from "./Membership";
 import UserDashboard from "./UserDashboard";
 import DashboardHome from "./DashboardHome";
+import UserNavbarLayout from "./UserNavbarLayout";
 
 import "./CSS/UserDashboard.css";
 
@@ -25,10 +26,13 @@ const User = () => {
         <Route path="research" element={<Research />} />
         <Route path="immersion" element={<Immersion />} />
         <Route path="placement" element={<Placement />} />
-        <Route path="profile" element={<Profile />} />
+      </Route>
+
+      <Route element={<UserNavbarLayout />}>
         <Route path="donation" element={<Donation />} />
         <Route path="mou" element={<MOU />} />
         <Route path="membership" element={<Membership />} />
+        <Route path="profile" element={<Profile />} />
       </Route>
     </Routes>
   );
