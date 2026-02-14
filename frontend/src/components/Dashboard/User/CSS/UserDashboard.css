@@ -45,6 +45,7 @@ body {
   width: 100%;
   height: calc(100vh - var(--user-navbar-height, 64px));
   overflow: hidden;
+  background-color: black;
 }
 
 .user-layout--full {
@@ -58,6 +59,7 @@ body {
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: rgba(90, 114, 140, 0.7) rgba(12, 16, 22, 0.7);
+  width: 100%;
 }
 
 
