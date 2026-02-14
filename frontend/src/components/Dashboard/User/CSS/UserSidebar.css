@@ -21,7 +21,10 @@
 .user-sidebar__backdrop {
   display: none;
   position: fixed;
-  inset: 0;
+  top: var(--user-navbar-height, 64px);
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: rgba(10, 15, 22, 0.35);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
@@ -210,6 +213,12 @@
   .user-sidebar__backdrop,
   .user-sidebar__floating-toggle {
     display: block;
+  }
+
+  .user-sidebar__floating-toggle {
+    left: 0;
+    transform: translateX(-40%);
+    background: rgba(15, 22, 31, 0.6);
   }
 
   .user-sidebar {

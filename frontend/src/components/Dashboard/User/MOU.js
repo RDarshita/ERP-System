@@ -1,6 +1,7 @@
 import React, { useMemo, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./CSS/MOU.css";
+import UserSidebar from "./UserComponents/UserSidebar";
 
 export default function MOU() {
   const navigate = useNavigate();
@@ -152,6 +153,9 @@ export default function MOU() {
 
   return (
     <div className="mou-page">
+      <div className="user-sidebar--mobile-only">
+        <UserSidebar />
+      </div>
       <section className="mou-hero">
         <div className="mou-hero__content">
           <div className="mou-hero__top">

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./CSS/Donation.css";
+import UserSidebar from "./UserComponents/UserSidebar";
 
 export default function Donation() {
   const navigate = useNavigate();
@@ -47,6 +48,9 @@ export default function Donation() {
 
   return (
     <div className="donation-page">
+      <div className="user-sidebar--mobile-only">
+        <UserSidebar />
+      </div>
       <header className="donation-hero">
         <div className="donation-hero__top">
           <div>

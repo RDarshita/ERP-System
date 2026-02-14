@@ -50,6 +50,11 @@
   z-index: 1;
 }
 
+.user-sidebar--mobile-only {
+  position: relative;
+  z-index: 1200;
+}
+
 /* Center header and content */
 .donation-hero,
 .donation-content {
@@ -181,6 +186,18 @@
 
 .back-btn:hover {
   background: #111827;
+}
+
+@media (min-width: 701px) {
+  .user-sidebar--mobile-only {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .back-btn {
+    display: none;
+  }
 }
 
 /* Payment details section */

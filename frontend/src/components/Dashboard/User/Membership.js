@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./CSS/Membership.css";
 import logo from "../../image/logoSAHFON.webp";
+import UserSidebar from "./UserComponents/UserSidebar";
 
 export default function Membership() {
   const navigate = useNavigate();
@@ -130,6 +131,9 @@ export default function Membership() {
 
   return (
     <div className="membership-page">
+      <div className="user-sidebar--mobile-only">
+        <UserSidebar />
+      </div>
       {/* Back to Dashboard Button */}
       <button className="back-to-dashboard" onClick={() => navigate('/dashboard/user/')}>
         <span className="back-arrow">←</span>

@@ -129,6 +129,23 @@
   color: #1f2937;
 }
 
+.user-sidebar--mobile-only {
+  position: relative;
+  z-index: 1200;
+}
+
+@media (min-width: 701px) {
+  .user-sidebar--mobile-only {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .mou-back-btn {
+    display: none;
+  }
+}
+
 .mou-hero__progress {
   position: relative;
   z-index: 1;
