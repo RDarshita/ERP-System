@@ -138,10 +138,16 @@
   .user-navbar {
     flex-direction: column;
     align-items: flex-start;
+    position: relative;
   }
 
   .user-navbar__center {
-    width: 100%;
-    justify-content: flex-start;
+    display: none;
+  }
+
+  .user-navbar__right {
+    position: absolute;
+    top: 12px;
+    right: 16px;
   }
 }
