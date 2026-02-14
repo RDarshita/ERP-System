@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Donation.css";
+import "./CSS/Donation.css";
+import UserSidebar from "./UserComponents/UserSidebar";
 
 export default function Donation() {
   const navigate = useNavigate();
@@ -47,44 +48,95 @@ export default function Donation() {
 
   return (
     <div className="donation-page">
-      <header className="donation-header">
-        <div className="donation-header-top">
-          <h1>💖 Donation</h1>
-          <button className="back-btn" onClick={() => navigate(-1)}>
-            ⬅ Back to Dashboard
+      <div className="user-sidebar--mobile-only">
+        <UserSidebar />
+      </div>
+      <header className="donation-hero">
+        <div className="donation-hero__top">
+          <div>
+            <p className="donation-hero__badge">Heart-led Giving</p>
+            <h1>Fuel a student journey today</h1>
+          </div>
+          <button className="back-btn" onClick={() => navigate("/dashboard/user/")}>
+            Back to Dashboard
           </button>
         </div>
-        <p>
-          Support our foundation’s mission. Every contribution helps fund
-          scholarships, research, and student development.
-        </p>
 
-        {/* New Payment Details Section */}
-        <div className="donation-payment">
-          <h2>Bank Payment Details</h2>
-          <div className="payment-card">
-            <p className="payment-foundation">Saathaihum Foundation</p>
-            <div className="payment-row">
-              <span>Account Number</span>
-              <strong>60534708338</strong>
+        <div className="donation-hero__grid">
+          <div className="donation-hero__copy">
+            <p className="donation-hero__lead">
+              Your support powers scholarships, research, and mentorship. Every
+              donation becomes a real opportunity for a student to thrive.
+            </p>
+
+            <div className="donation-hero__actions">
+              <button type="button" className="amount-chip">
+                ₹500
+              </button>
+              <button type="button" className="amount-chip">
+                ₹1,500
+              </button>
+              <button type="button" className="amount-chip">
+                ₹5,000
+              </button>
+              <button type="button" className="amount-chip is-featured">
+                ₹10,000
+              </button>
             </div>
-            <div className="payment-row">
-              <span>IFSC Code</span>
-              <strong>MAHB0002410</strong>
+
+            <div className="donation-hero__trust">
+              <div className="trust-card">
+                <span>100% Transparent</span>
+                <strong>Impact updates shared</strong>
+              </div>
+              <div className="trust-card">
+                <span>Safe Transfers</span>
+                <strong>Verified bank details</strong>
+              </div>
             </div>
-            <div className="payment-row">
-              <span>Branch</span>
-              <strong>Dhanori</strong>
-            </div>
-            <div className="payment-row">
-              <span>Bank</span>
-              <strong>Bank of Maharashtra</strong>
+          </div>
+
+          <div className="donation-payment">
+            <h2>Bank Payment Details</h2>
+            <div className="payment-card">
+              <p className="payment-foundation">Saathaihum Foundation</p>
+              <div className="payment-row">
+                <span>Account Number</span>
+                <strong>60534708338</strong>
+              </div>
+              <div className="payment-row">
+                <span>IFSC Code</span>
+                <strong>MAHB0002410</strong>
+              </div>
+              <div className="payment-row">
+                <span>Branch</span>
+                <strong>Dhanori</strong>
+              </div>
+              <div className="payment-row">
+                <span>Bank</span>
+                <strong>Bank of Maharashtra</strong>
+              </div>
             </div>
           </div>
         </div>
       </header>
 
       <main className="donation-content">
+        <section className="donation-impact">
+          <div className="impact-card">
+            <p>Scholarships Sponsored</p>
+            <strong>120+</strong>
+          </div>
+          <div className="impact-card">
+            <p>Research Grants</p>
+            <strong>45</strong>
+          </div>
+          <div className="impact-card">
+            <p>Students Mentored</p>
+            <strong>600+</strong>
+          </div>
+        </section>
+
         <section className="donation-campaigns">
           <h2>Active Campaigns</h2>
           <ul>
